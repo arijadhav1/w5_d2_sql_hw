@@ -18,7 +18,7 @@ CREATE TABLE Movies (
 
 CREATE TABLE Tickets (
   ticket_id SERIAL,
-  ticket_price NUMERIC(2, 2),
+  ticket_price NUMERIC(4, 2),
   movie_id INTEGER,
   customer_id INTEGER,
   PRIMARY KEY (ticket_id),
@@ -31,7 +31,7 @@ CREATE TABLE Concessions (
   snacks VARCHAR(100),
   drinks VARCHAR(100),
   inventory INTEGER,
-  price NUMERIC(2, 2),
+  price NUMERIC(4, 2),
   customer_id INTEGER,
   PRIMARY KEY (concession_id),
     FOREIGN KEY (customer_id)
